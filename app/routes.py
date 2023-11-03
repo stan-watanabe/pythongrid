@@ -25,7 +25,7 @@ def index():
 
 @app.route('/data', methods=['GET', 'POST'])
 def data():
-    data = PythonGridDbData()
+    data = PythonGridDbData('SELECT * FROM orders')
     return data.getData()
 
 @app.route('/export', methods=['GET', 'POST'])
